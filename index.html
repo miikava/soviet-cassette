@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <!--
+        -->
+        <link href="/static/div.css" rel="stylesheet">
+        <link href="/static/slider.css" rel="stylesheet">
+        <script src="functions.js" defer></script>
+        <script src="audioinfo.js" defer></script>
+        <script src="cassetteplayer.js" defer></script>
+        <title>soviet tapedeck</title>
+    </head>
+
+    <body>
+        <audio id="song1" src="static/mp3/DOGS_LIKE_ME.mp3" type="audio/mpeg"></audio>
+
+        <header>
+            <div>    
+                <h1 style="display:inline">МИКХАИЛ & ОЛИЧУЗЙКА -ДОГС ЛИКЕ МЕ</h1>
+                <button id="nav-icon" hidden>NAV</button>
+            </div>
+        </header>
+        
+        <!--<div class="section-1">
+            <div class="tape-info">
+                <output id="mixtape-info-output">MixTape Name</output>
+                <img src="/static/images/cassette_1_sm.png" class="cassette-png">
+            </div>
+            <div class="volume-slider" style="display:inline">
+                <input type="range" id="volume-slider" max="100" value="50" class="slider"><br>
+                <output id="volume-output" hidden>100</output>
+            </div>
+            <div class="placeholderdiv1">
+
+            </div>
+        </div>-->
+        <div id="audioinfodiv">
+            <input type="range" id="volume-slider" max="100" value="50" class="slider"><br>
+            <output id="volume-output" hidden>100</output>
+            <input type="range" id="seek-slider" max="100" value="0" class="slider" hidden> <br>
+            <span id="current-time" class="time" hidden>0:00</span>
+            <span id="duration" class="time" hidden>0:00</span>
+        </div>
+
+            <div class="section-2" role="group" id="buttons" style="height:100px">
+                <input type="radio" class="btn-check" id="play-btn" name="playback" onclick="playAudio()">
+                <label class="btn btn-primary" for="play-btn"><img src="static/icons/play_icon.png"></label>
+                <input type="radio" class="btn-check" id="stop-btn" name="playback" onclick="pauseAudio()">
+                <label class="btn btn-primary" for="stop-btn"><img src="static/icons/stop_icon.png"></label>
+                <input type="radio" class="btn-check" id="rw-btn" name="playback">
+                <label class="btn btn-primary" for="rw-btn"><img src="static/icons/RW_icon.png"></label>
+                <input type="radio" class="btn-check" id="ff-btn" name="playback">
+                <label class="btn btn-primary" for="ff-btn"><img src="static/icons/FF_icon.png"></label>
+            </div>
+
+            <div class="section-3">
+                <output id="filename-output">name</output>
+                <img id="player-body" src="/static/images/player_placeholder_3.png">
+            </div>
+
+
+            <!--<div class="seek-slider">
+                <input type="range" id="seek-slider" max="100" value="0" class="slider" hidden> <br>
+                <span id="current-time" class="time" hidden>0:00</span>
+                <span id="duration" class="time" hidden>0:00</span>
+            </div>-->
+    </body>
+</html>
